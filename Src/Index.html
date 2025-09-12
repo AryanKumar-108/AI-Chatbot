@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI ChatBot</title>
+    <!-- Main stylesheet for layout and theming -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <!-- App shell: sidebar (history/settings) + main chat area -->
+    <div class="app-container">
+        <!-- Left sidebar: new chat + history + compact settings popover -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <img src="../Media/ChatBot-Logo.png" alt="AI ChatBot" class="logo-image">
+                    <span class="logo-text">AI ChatBot</span>
+                </div>
+                <button class="new-chat-btn" id="new-chat-btn">
+                    <span class="material-icons">add</span>     
+                    New chat
+                </button>                                                                                                               
+            </div>
+            <!-- Recent chats are injected here via JS -->
+            <div class="chat-history" id="chat-history"></div>
+            <div class="sidebar-footer">
+                <button class="settings-btn" id="settings-btn">
+                    <span class="material-icons">settings</span>
+                    Settings
+                </button>
+                <div class="settings-popover hidden" id="settings-popover" role="dialog" aria-label="Settings">
+                    <div class="popover-section">
+                        <div class="popover-title">Theme</div>
+                        <div class="setting-actions">
+                            <button class="chip" data-theme="light">Light</button>
+                            <button class="chip" data-theme="dark">Dark</button>
+                            <button class="chip" data-theme="system">System</button>
+                        </div>
+                    </div>
+                    <div class="popover-section">
+                        <div class="popover-title">Model</div>
+                        <select id="model-select-pop">
+                            <option value="gemini-1.5-flash-latest">Gemini 1.5 Flash</option>
+                        </select>
+                    </div>
+                    <div class="popover-actions">
+                        <button class="primary" id="settings-save-pop">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="main-content">
+            <div class="chat-header">
+                <!-- Top bar: menu toggle (mobile), title, quick actions -->
+                <div class="header-left">
+                    <button class="menu-btn" aria-label="Toggle chats">
+                        <span class="material-icons">menu</span>
+                    </button>
+                    <h1>AI ChatBot</h1>
+                </div>
+                <div class="header-right">
+                    <button class="header-btn theme-toggle" id="theme-toggle" title="Toggle dark mode">
+                        <span class="material-icons" id="theme-toggle-icon">dark_mode</span>
+                    </button>
+                    <button class="header-btn" id="reload-btn" title="Reload">
+                        <span class="material-icons">refresh</span>
+                    </button>
+                    <button class="header-btn" id="menu-btn" title="More">
+                        <span class="material-icons">more_vert</span>
+                    </button>
+                    <div class="menu-dropdown hidden" id="menu-dropdown">
+                        <button class="menu-item" id="menu-clear-chat">Clear chat</button>
+                        <button class="menu-item" id="menu-clear-all">Clear all chats</button>
+                        <button class="menu-item" id="menu-export">Export chat</button>
+                        <div class="menu-divider"></div>
+                        <button class="menu-item" id="menu-about">About</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat area: welcome state + message list -->
+            <div class="chat-container">
+                <div class="welcome-section" id="welcome-section">
+                    <div class="welcome-content">
+                        <img src="../Media/ChatBot-Logo.png" alt="AI ChatBot" class="welcome-logo">
+                        <h2>Hello! I'm AI ChatBot</h2>
+                        <p>I can help you with writing, analysis, math, coding, and more. What would you like to work on today?</p>
+                        <div class="suggestion-chips">
+                            <button class="suggestion-chip" data-prompt="Help me write a professional email">Help me write a professional email</button>
+                            <button class="suggestion-chip" data-prompt="Explain quantum computing in simple terms">Explain quantum computing</button>
+                            <button class="suggestion-chip" data-prompt="Write a Python function to sort a list">Write a Python function</button>
+                            <button class="suggestion-chip" data-prompt="Plan a healthy meal for the week">Plan a healthy meal</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-messages" id="chat-messages"></div>
+            </div>
+
+            <!-- Input area: textarea, attach image, send button, disclaimer -->
+            <div class="input-container">
+                <div class="input-wrapper">
+                    <div class="input-area">
+                        <div class="attachment-preview hidden" id="attachment-preview"></div>
+                        <textarea id="user-input" placeholder="Message AI ChatBot..." rows="1"></textarea>
+                        <div class="input-actions">
+                            <button class="attach-btn" title="Attach file">
+                                <span class="material-icons">attach_file</span>
+                            </button>
+                            <button class="send-btn" id="send-button" disabled>
+                                <span class="material-icons">send</span>
+                            </button>
+                        </div>
+                        <input type="file" id="file-input" accept="image/*" hidden>
+                    </div>
+                    <div class="input-footer">
+                        <p>AI ChatBot may display inaccurate info, including about people, so double-check its responses.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAB to quickly jump to latest messages -->
+    <button class="scroll-to-bottom" id="scroll-to-bottom" title="Scroll to bottom">
+        <span class="material-icons">south</span>
+    </button>
+
+    <!-- Removed old modal-based settings UI; using lightweight popover in sidebar instead. -->
+
+    <script src="script.js"></script>
+</body>
+</html>
