@@ -51,10 +51,8 @@ const GEMINI_API_KEY = "your_api_key_here"; // Replace with your Gemini API key
   # 📸 Screenshot :
   <p>
   <hr style="border: 1px solid black;">
-  <img src="Media\Screenshot-03.png"><br>
-  <hr style="border: 1px solid black;">
-  <img src="Media\Screenshot-04.png"><br><hr>
-  <hr style="border: 1px solid black;">
+  <img src="Media\Screenshot-03.png"><br> <hr style="border: 1px solid black;">
+  <img src="Media\Screenshot-04.png"><br> <hr style="border: 1px solid black;">
   </p>
   <br>
 
@@ -76,14 +74,16 @@ const GEMINI_API_KEY = "your_api_key_here"; // Replace with your Gemini API key
 - Share ideas 💡
 
 - Submit pull requests 📥
-<hr><br>
+ <br>
 
 # ⭐ Support
 
 - If you find this project useful, don’t forget to star ⭐ the repo!
 
 **👉 Developed by AryanKumar-108 🙌**
+
 <br>
+
 
 # Credits
 - Model: Gemini 1.5 Flash
