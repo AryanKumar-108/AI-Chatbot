@@ -2,7 +2,7 @@
 
   <p>
     This project is a simple yet powerful AI ChatBot website built using HTML, CSS, JavaScript, and the Google Gemini API. The chatbot provides real-time responses, making conversations interactive and engaging. It is designed with a clean and user-friendly interface, ensuring a smooth user experience. The website leverages modern web technologies for fast performance and responsive design, making it accessible across devices. The integration with the Google Gemini API allows the chatbot to understand queries intelligently and deliver human-like replies. This project can be used as a foundation for creating advanced AI-driven applications, customer support bots, or personal assistants. Developers can further enhance it by adding features like authentication, voice interaction, or database connectivity.
-  </p><br>
+  </p>
 
   # 🚀 Features
   <ul>
@@ -11,14 +11,14 @@
     <li>🎨 <b>Modern design</b> with HTML/CSS/JS</li>
     <li>🔑 <b>API key integration</b> Google Gemini</li>
     <li>⚡ <b>Fast and lightweight</b></li>
-  </ul><br>
+  </ul>
 
   # 🛠️ Tech Stack
   <ul>
     <li><b>Frontend</b>: HTML, CSS, JavaScript</li>
     <li><b>AI Backend</b>: Google Gemini API</li>
   </ul>
-  <br>
+  
 
   <h2>📂 Project Structure</h2>
   <pre>
@@ -27,7 +27,7 @@
  ┣ 📂 Src          # Code
  ┣ 📜 README.md    # Documentation
   </pre>
-  <br>
+  
 
   <h2>🔑 Setup Instructions</h2>
   <ol>
@@ -46,7 +46,7 @@ const GEMINI_API_KEY = "your_api_key_here"; // Replace with your Gemini API key
     </li>
     <li><b>Start chatting with your AI bot! 🎉</b></li>
   </ol>
-  <br>
+  
 
   # 📸 Screenshot :
   <p>
@@ -54,7 +54,7 @@ const GEMINI_API_KEY = "your_api_key_here"; // Replace with your Gemini API key
   <img src="Media\Screenshot-03.png"><br> <hr style="border: 1px solid black;">
   <img src="Media\Screenshot-04.png"><br> <hr style="border: 1px solid black;">
   </p>
-  <br>
+  
 
   # 📌 Future Improvements
   <ul>
@@ -62,7 +62,6 @@ const GEMINI_API_KEY = "your_api_key_here"; // Replace with your Gemini API key
     <li>💾 Chat history storage (local storage / database)</li>
     <li>🎤 Voice input & output support</li>
   </ul>
-  <br>
 
 
 # 🤝 Contributing
@@ -74,7 +73,7 @@ const GEMINI_API_KEY = "your_api_key_here"; // Replace with your Gemini API key
 - Share ideas 💡
 
 - Submit pull requests 📥
- <br>
+ 
 
 # ⭐ Support
 
@@ -82,7 +81,7 @@ const GEMINI_API_KEY = "your_api_key_here"; // Replace with your Gemini API key
 
 **👉 Developed by AryanKumar-108 🙌**
 
-<br>
+
 
 
 # Credits
